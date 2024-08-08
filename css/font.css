@@ -1,0 +1,9 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.cdnfonts.com/css/druk-trial');
+
+     {
+     font-family: "Cinzel", serif;
+     font-family: "Inter Tight", sans-serif;
+     font-family: 'Druk Wide Trial', sans-serif;
+ }

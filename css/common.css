@@ -1,0 +1,224 @@
+/*common*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* root */
+:root {
+    /* font-size */
+    --size-xsm: 1.4rem;
+    --size-sm: 1.6rem;
+    --size-middle: 2.0rem;
+    --size-large: 2.6rem;
+    --size-big: 3.2rem;
+    --size-xbig: 5.2rem;
+    --size-2xbig: 12rem;
+    --size-3xbig: 15rem;
+    --size-4xbig: 20rem;
+
+    /* weight */
+    --weight-l: 300;
+    --weight-r: 500;
+    --weight-b: 700;
+    --weight-bk: 900;
+}
+
+/* intro start*/
+.bg {
+    position: fixed;
+    /* 백그라운드 배경 고정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/intro2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+    /* 투명 텍스트 효과 */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.intro_group {
+    position: fixed;
+    background: #000;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.intro_group .marquee {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.2;
+    text-transform: uppercase;
+    line-height: 180px;
+    margin: 0;
+    padding: 0;
+    color: #646464;
+    font-size: 200px;
+    font-family: "Cinzel";
+}
+
+.intro_group .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.intro_group .intro h1 {
+    font-size: 15vw;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #fff;
+    font-family: "Cinzel";
+    font-weight: bold;
+}
+
+.circle {
+    width: 3vmax;
+    height: 3vmax;
+    background-color: #fff;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    will-change: transform;
+}
+
+/* header start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.13vw;
+    height: 100px;
+    font-family: "Inter Tight", sans-serif;
+    font-size: var(--size-big);
+    font-weight: var(--weight-b);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+header .clock {
+    display: flex;
+    user-select: none;
+}
+
+header .time {
+    margin-left: 0.53vw;
+}
+
+.Menu-list {
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.Menu-list-item {
+    position: relative;
+    color: transparent;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+}
+
+.Menu-list-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: -10%;
+    right: -10%;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: -2px;
+    background: #fff;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    z-index: 1;
+}
+
+.Mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: #fff;
+    top: 0;
+    height: 49%;
+    transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+
+.Mask span {
+    display: block;
+}
+
+.Mask+.Mask {
+    top: 48.9%;
+    height: 51.1%;
+}
+
+.Mask+.Mask span {
+    transform: translateY(-49%);
+}
+
+.Menu-list-item:hover .Mask,
+.Menu-list-item:active .Mask {
+    color: #FFF;
+    transform: skewX(12deg) translateX(5px);
+}
+
+.Menu-list-item:hover .Mask+.Mask,
+.Menu-list-item:active .Mask+.Mask {
+    transform: skewX(12deg) translateX(-5px);
+}
+
+.Menu-list-item:hover::before,
+.Menu-list-item:active::before {
+    transform: scale(1);
+}
+
+/* header reponsive start */
+@media (max-width: 768px) {
+    header {
+        font-size: var(--size-large);
+        height: 60px;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header .clock {
+        display: none;
+    }
+
+    .Menu-list {
+        gap: 5vw;
+    }
+}
