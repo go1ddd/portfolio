@@ -1,12 +1,31 @@
 /*common*/
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #000;
     color: #fff;
     transition: 0.3s;
+    font-family: "Pretendard";
+    word-break: keep-all;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+    display: none;
+}
+
+/*cursor*/
+.cursor {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10000;
+    opacity: 0;
 }
 
 /* root */
@@ -103,19 +122,19 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2.13vw;
-    height: 100px;
-    font-family: "Inter Tight", sans-serif;
+    padding: 0 40px;
+    height: 8.7vh;
     font-size: var(--size-big);
     font-weight: var(--weight-b);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+    mix-blend-mode: difference;
 }
 
 .on {
@@ -129,7 +148,12 @@ header .clock {
 }
 
 header .time {
-    margin-left: 0.53vw;
+    margin-left: 11px;
+}
+
+header .clock:hover {
+    transition: 0.3s;
+    color: #00ff04;
 }
 
 .Menu-list {
@@ -221,4 +245,20 @@ header .time {
     .Menu-list {
         gap: 5vw;
     }
+}
+
+/*cursor start*/
+.circle {
+    width: 1vmax;
+    height: 1vmax;
+    background-color: #FFF;
+    position: absolute;
+    top: 32%;
+    left: -0.3%;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    will-change: transform;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
 }

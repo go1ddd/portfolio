@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    /*cursor start*/
+    document.addEventListener('mousemove', (e) => {
+        let mouseX = e.pageX + 10; // document의 x좌표값
+        let mouseY = e.pageY + 10; // document의 y좌표값
+
+        let cursor = document.querySelector('.cursor');
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    })
+    /*hover ani start*/
+    $(".work_list img").hover(function () {
+        $(".cursor").addClass("on")
+    }, function () {
+        $(".cursor").removeClass("on")
+    })
+
     /*header start*/
     $(window).on('scroll', function () {
         if ($(window).scrollTop()) {
@@ -65,5 +81,6 @@ $(document).ready(function () {
         top: "-100%",
         ease: Expo.easeInOut
     });
+
 });
 

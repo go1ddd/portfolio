@@ -21,9 +21,13 @@
 /*main start*/
 /*visual start*/
 .visual {
+    position: sticky;
+    top: 0;
+    left: 0;
     height: 100%;
-    width: 100%;
-    z-index: -2;
+    width: calc(100vw - (100vw - 100%));
+    z-index: -1;
+    padding-bottom: 8.33vw;
 }
 
 .video {
@@ -41,7 +45,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Inter Tight", sans-serif;
     font-size: 6.2vw;
     font-weight: var(--weight-r);
     user-select: none;
@@ -49,19 +52,24 @@
 
 /*about_me start*/
 .sec {
-    margin-top: 10.6vw;
-    padding: 0 40px;
+    padding: 0 40px 8.33vw 40px;
+    background-color: #000;
+
 }
 
 .about_me_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    padding-top: 8.33vw;
 }
 
 .txt_box {
-    margin-top: 5.3vw;
-    font-family: "Inter Tight", sans-serif;
-    font-size: 6.2vw;
-    font-weight: var(--weight-r);
+    padding-top: 4.17vw;
+    font-size: 5vw;
+    font-weight: var(--weight-b);
     user-select: none;
     text-align: center;
     z-index: 10;
@@ -76,13 +84,17 @@
     z-index: -1;
 }
 
+.about_me_sec h1:first-child {
+    margin-bottom: 2.66vw;
+}
+
 .astro-G26LNY4H {
     position: absolute;
     border: solid 3px #fff;
     box-sizing: border-box;
-    height: 80px;
+    height: 70px;
     transform-origin: 0px 0px !important;
-    border-radius: 100px;
+    border-radius: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +104,7 @@
     color: #fff;
     user-select: none;
     transition: color .3s;
-    cursor: pointer;
+
     --angle: 0deg;
     transform: rotate(var(--angle));
     --delay: 0s;
@@ -100,7 +112,7 @@
 
 .animate_50 {
     border: 0;
-    animation: fadein 6s ease-in-out infinite;
+    animation: fadein 11s ease-in-out infinite;
 }
 
 .animate_50:hover>div {
@@ -111,7 +123,7 @@
 
 .animate_250 {
     border: 0;
-    animation: fadein 4s ease-in-out infinite;
+    animation: fadein 9s ease-in-out infinite;
 }
 
 .animate_250:hover>div {
@@ -121,7 +133,7 @@
 
 .animate_350 {
     border: 0;
-    animation: fadein 3s ease-in-out infinite;
+    animation: fadein 6s ease-in-out infinite;
 }
 
 .animate_350:hover>div {
@@ -131,7 +143,7 @@
 
 .animate_150 {
     border: 0;
-    animation: fadein 7s ease-in-out infinite;
+    animation: fadein 8s ease-in-out infinite;
 }
 
 .animate_150:hover>div {
@@ -154,16 +166,105 @@
     }
 }
 
-.animate_150 {
-    background-color: red;
-}
 
-.container {
-    margin: 100px auto 0 auto;
+.about_me_sec .container {
     position: relative;
-    width: 100%;
+    overflow: hidden;
+    width: 1420px;
     height: 300px;
+    margin: 4.17vw 0 0 0;
+    z-index: 10;
+}
+
+/*work_group start*/
+.work_tit {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 4.17vw;
+    font-size: 12vw;
+    font-weight: var(--weight-b);
+    user-select: none;
+    text-align: center;
+    z-index: 1;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+.work_wrap {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 
 }
 
-@media (max-width: 1000px) {}
+.work_list {
+    width: 57%;
+    /*이걸로 글씨 간격과 맞춰서 이쁘게 조절*/
+    z-index: 5;
+    position: relative;
+}
+
+.work_box {
+    width: 100%;
+    background-color: #000;
+}
+
+.work_box a {
+    width: 100%;
+}
+
+.work_box img {
+    width: 100%;
+}
+
+.work_txt {
+    padding: 50px 0;
+    text-align: left;
+    font-size: 3vw;
+    line-height: 3.4vw;
+    text-align: left;
+    font-family: "Cinzel", serif;
+    user-select: none;
+}
+
+.work_area img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.txt_holder {
+    width: 40%;
+    padding-bottom: 50px;
+    padding-left: 2.3vw;
+    font-size: var(--size-sm);
+    position: absolute;
+    top: auto;
+    bottom: 0;
+}
+
+.work_txt_box {
+    z-index: 2;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.reverse .work_wrap {
+    align-items: start;
+}
+
+.reverse .txt_holder {
+    right: 0;
+    text-align: right;
+}
+
+.reverse .work_txt {
+    text-align: right;
+}
