@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    gsap.registerPlugin(ScrollTrigger);
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
@@ -7,9 +8,21 @@ $(document).ready(function () {
         let cursor = document.querySelector('.cursor');
         cursor.style.left = mouseX + 'px';
         cursor.style.top = mouseY + 'px';
-    })
+    });
+    gsap.set('.about_me_sec .txt_box', { scale: 0, opacity: 0 });
+    gsap.to('.about_me_sec .txt_box', {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+            trigger: '.about_me_sec',
+            start: "-50% top",
+            end: "bottom bottom",
+            scrub: 1,
+            markers: false,
+        },
+    });
     /*hover ani start*/
-    $(".work_list img").hover(function () {
+    $(".work_list a").hover(function () {
         $(".cursor").addClass("on")
     }, function () {
         $(".cursor").removeClass("on")
