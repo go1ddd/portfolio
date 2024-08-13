@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    gsap.registerPlugin(ScrollTrigger);
+
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
@@ -9,6 +9,8 @@ $(document).ready(function () {
         cursor.style.left = mouseX + 'px';
         cursor.style.top = mouseY + 'px';
     });
+    /*animation start*/
+    gsap.registerPlugin(ScrollTrigger);
     gsap.set('.about_me_sec .txt_box', { scale: 0, opacity: 0 });
     gsap.to('.about_me_sec .txt_box', {
         opacity: 1,
@@ -21,6 +23,38 @@ $(document).ready(function () {
             markers: false,
         },
     });
+    gsap.from(".sub_work_sec .img01", {
+        scrollTrigger: {
+            trigger: ".tit01", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            start: "top 60%", // 애니메이션 시작시점
+            end: "100px bottom", // 애니메이션 종료시점
+            scrub: 3,
+            markers: false,// 트리거 마커의 표시(boolean)
+        },
+        y: 2000,
+    });
+    gsap.from(".sub_work_sec .img02", {
+        scrollTrigger: {
+            trigger: ".tit02", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            start: "top 60%", // 애니메이션 시작시점
+            end: "100px bottom", // 애니메이션 종료시점
+            scrub: 3,
+            markers: false,// 트리거 마커의 표시(boolean)
+        },
+        y: 2000,
+    });
+    gsap.from(".sub_work_sec .img03", {
+        scrollTrigger: {
+            trigger: ".tit03", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            start: "top 60%", // 애니메이션 시작시점
+            end: "100px bottom", // 애니메이션 종료시점
+            scrub: 3,
+            markers: false,// 트리거 마커의 표시(boolean)
+        },
+        y: 2000,
+    });
+    Splitting();
+
     /*hover ani start*/
     $(".work_list a").hover(function () {
         $(".cursor").addClass("on")

@@ -28,6 +28,7 @@
     width: calc(100vw - (100vw - 100%));
     z-index: -1;
     padding-bottom: 8.33vw;
+    background-color: #000;
 }
 
 .video {
@@ -36,7 +37,7 @@
 
 .visual video {
     display: block;
-    width: calc(100vw - (100vw - 100%));
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -55,6 +56,7 @@
 
 /*about_me start*/
 .sec {
+    width: 100vw;
     padding: 0 40px 10.416vw 40px;
     background-color: #000;
 
@@ -196,6 +198,70 @@
     z-index: 10;
 }
 
+/* svg start */
+.cube_box {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    background-color: #000;
+}
+
+.cube {
+    animation: rotate 10s linear infinite;
+    height: 300px;
+    margin: auto;
+    transform-style: preserve-3d;
+    width: 300px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
+    }
+}
+
+.face {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.front {
+    background-image: url(../img/flower.gif);
+    transform: translateZ(150px);
+}
+
+.back {
+    background-image: url(../img/butterfly.webp);
+    transform: translateZ(-150px);
+}
+
+.left {
+    background-image: url(../img/soldier.png);
+    transform: translateX(-150px) rotateY(90deg);
+}
+
+.right {
+    background-image: url(../img/map.png);
+    transform: translateX(150px) rotateY(90deg);
+}
+
+.top {
+    background-image: url(../img/bottle.png);
+    transform: translateY(-150px) rotateX(90deg);
+}
+
+.bottom {
+    background-image: url(../img/headset.png);
+    transform: translateY(150px) rotateX(90deg);
+}
+
 /*work_group start*/
 .work_tit {
     position: sticky;
@@ -308,13 +374,15 @@
 }
 
 .txt_holder {
+    position: absolute;
+    top: auto;
+    bottom: 0;
     width: 40%;
     padding-bottom: 50px;
     padding-left: 2.3vw;
     font-size: var(--size-sm);
-    position: absolute;
-    top: auto;
-    bottom: 0;
+    font-weight: var(--weight-b);
+
 }
 
 .txt_holder p {
@@ -353,6 +421,7 @@
     font-family: 'Druk Wide Trial', sans-serif;
     font-weight: var(--weight-b);
     padding-bottom: 10.416vw;
+    width: 100vw;
 
 }
 
@@ -431,7 +500,8 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    background-color: #101010;
+    padding: 0;
+    white-space: nowrap;
 }
 
 .sub_work_box {
@@ -439,11 +509,18 @@
     top: 0;
     left: 0;
     background-color: #101010;
+    width: 100%;
+}
+
+.sub_work_box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub_work_list {
     position: relative;
-    padding: 190px;
+    padding: 247px;
 }
 
 .sub_work_tit {

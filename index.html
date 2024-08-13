@@ -18,6 +18,7 @@
 
 <body>
     <div class="wrap">
+        <!--intro start
         <div class="intro_group">
             <div class="marquee">
                 <marquee direction="right" scrollamount="30">portfoio portfoio</marquee>
@@ -28,8 +29,7 @@
             <div class="intro bg">
                 <h1 class="intro_title">Portfolio</h1>
             </div>
-        </div>
-
+        </div>-->
         <!--header start-->
         <header>
             <div class="clock">
@@ -70,9 +70,6 @@
                 <div class="txt_box">
                     <h1>STAY <span>CURIOUS</span></h1>
                     <h1>CAN <span>MOVE ON.</span></h1>
-                    <div class="thumbnail">
-                        <img src="img/about_jupiter1.png" alt="">
-                    </div>
                 </div>
                 <div class="container">
                     <div class="astro-G26LNY4H animate_50">
@@ -121,6 +118,20 @@
                     </div>
                 </div>
             </section>
+            <!--알지비 효과-->
+            <div class="cube_box">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+
+
+
             <!--work start-->
             <section class="sec work_group_sec" id="work">
                 <div class="txt_box">
@@ -348,10 +359,10 @@
                 <div class="sub_work_box">
                     <a href="#네이버 더보기 버튼구현">
                         <div class="sub_work_list">
-                            <div class="sub_work_tit">
+                            <div class="sub_work_tit tit01">
                                 NAVER
                             </div>
-                            <div class="img">
+                            <div class="img img01">
                                 <img src="img/naver.png" alt="">
                             </div>
                         </div>
@@ -360,10 +371,10 @@
                 <div class="sub_work_box">
                     <a href="#네이버 더보기 버튼구현">
                         <div class="sub_work_list">
-                            <div class="sub_work_tit">
+                            <div class="sub_work_tit tit02">
                                 WATCHA
                             </div>
-                            <div class="img">
+                            <div class="img img02">
                                 <img src="img/watcha.png" alt="">
                             </div>
                         </div>
@@ -372,21 +383,89 @@
                 <div class="sub_work_box">
                     <a href="#네이버 더보기 버튼구현">
                         <div class="sub_work_list sub_third">
-                            <div class="sub_work_tit">
+                            <div class="sub_work_tit tit03">
                                 KAKAO BANK
                             </div>
-                            <div class="img">
+                            <div class="img img03">
                                 <img src="img/kakao_bank.png" alt="">
                             </div>
                         </div>
                     </a>
                 </div>
             </section>
+            <div class="cursor"></div>
         </main>
         <!--footer start-->
         <footer>
+            <div class="footer_shape footer_shape01">
+                <img src="img/footer_shape1.png" alt="">
+            </div>
+            <div class="footer_shape footer_shape02">
+                <img src="img/footer_shape2.png" alt="">
+            </div>
+            <div class='footer_head'>
+                <div>LET'S MAKE</div>
+                <div class='footer_head_scroller'>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        IMPACT
+                    </div>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        IMPACT
+                    </div>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        IMPACT
+                    </div>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        IMPACT
+                    </div>
+                    <div class='scroller_item'>
+                        CONTACT
+                    </div>
+                    <div class='scroller_item'>
+                        IMPACT
+                    </div>
+                </div>
+            </div>
+            <address>
+                <a href="mailto:vekasio@naver.com">
+                    <div class="address_wrap">
+                        <h4>Write</h4>
+                        <div class="address_box">
+                            <div class="address__link">
+                                <span class="address__link--text" data-splitting>vekasio@naver.com</span>
+                                <span class="address__link--text" data-splitting>vekasio@naver.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="tel:+82-10-2301-1074">
+                    <div class="address_wrap">
+                        <h4>Call</h4>
+                        <div class="address_box">
+                            <div class="address__link">
+                                <span class="address__link--text" data-splitting>+82-10-2301-1074</span>
+                                <span class="address__link--text" data-splitting>+82-10-2301-1074</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </address>
         </footer>
-        <div class="cursor"></div>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/main.js"></script>
         <script
@@ -401,6 +480,7 @@
             data-useControls="true" data-useAnchor="true" data-useRaf="true" data-infinite="false" defer
             src="https://assets-global.website-files.com/645e0e1ff7fdb6dc8c85f3a2/64a5544a813c7253b90f2f50_lenis-offbrand.txt">
             </script>
+        <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
     </div>
 </body>
 
