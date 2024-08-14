@@ -31,11 +31,11 @@
     background-color: #000;
 }
 
-.video {
+.video_wrap {
     position: relative;
 }
 
-.visual video {
+.video_wrap video {
     display: block;
     width: 100vw;
     object-fit: cover;
@@ -209,10 +209,10 @@
 
 .cube {
     animation: rotate 10s linear infinite;
-    height: 300px;
+    height: 200px;
     margin: auto;
     transform-style: preserve-3d;
-    width: 300px;
+    width: 200px;
 }
 
 @keyframes rotate {
@@ -230,36 +230,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url(../img/crystal.webp);
+
 }
 
 .front {
-    background-image: url(../img/flower.gif);
-    transform: translateZ(150px);
+    transform: translateZ(100px);
 }
 
 .back {
-    background-image: url(../img/butterfly.webp);
-    transform: translateZ(-150px);
+    transform: translateZ(-100px);
 }
 
 .left {
-    background-image: url(../img/soldier.png);
-    transform: translateX(-150px) rotateY(90deg);
+    transform: translateX(-100px) rotateY(90deg);
 }
 
 .right {
-    background-image: url(../img/map.png);
-    transform: translateX(150px) rotateY(90deg);
+    transform: translateX(100px) rotateY(90deg);
 }
 
 .top {
-    background-image: url(../img/bottle.png);
-    transform: translateY(-150px) rotateX(90deg);
+    transform: translateY(-100px) rotateX(90deg);
 }
 
 .bottom {
-    background-image: url(../img/headset.png);
-    transform: translateY(150px) rotateX(90deg);
+    transform: translateY(100px) rotateX(90deg);
 }
 
 /*work_group start*/

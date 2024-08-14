@@ -11,6 +11,15 @@ body {
     font-family: "Pretendard";
     word-break: keep-all;
     overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+.fixed {
+    position: fixed !important;
+    top: 0 !important;
+    overflow: hidden !important;
 }
 
 ::-webkit-scrollbar {

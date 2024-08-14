@@ -1,5 +1,10 @@
-$(document).ready(function () {
+/*body scroll on*/
+setTimeout(function () {
+    $("body").removeClass('fixed');
+}, 5000);
 
+
+$(document).ready(function () {
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
@@ -86,10 +91,13 @@ $(document).ready(function () {
             return time;
     }
     window.onload = function () {
+        /*refresh top*/
+        setTimeout(function () {
+            scrollTo(0, 0);
+        }, 100)
         setClock();
         setInterval(setClock, 1000);//1초마다 setClock 함수 실행
     }
-
     /*intro start*/
     var textWrapper = document.querySelector(".intro_title");
 
@@ -128,6 +136,5 @@ $(document).ready(function () {
         top: "-100%",
         ease: Expo.easeInOut
     });
-
 });
 
