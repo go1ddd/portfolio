@@ -5,6 +5,10 @@ setTimeout(function () {
 
 
 $(document).ready(function () {
+    /*resize refresh
+    window.onresize = function () {
+        document.location.reload();
+    };*/
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
@@ -30,7 +34,7 @@ $(document).ready(function () {
     });
     gsap.from(".sub_work_sec .img01", {
         scrollTrigger: {
-            trigger: ".tit01", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            trigger: ".list01", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
             start: "top 60%", // 애니메이션 시작시점
             end: "100px bottom", // 애니메이션 종료시점
             scrub: 3,
@@ -40,7 +44,7 @@ $(document).ready(function () {
     });
     gsap.from(".sub_work_sec .img02", {
         scrollTrigger: {
-            trigger: ".tit02", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            trigger: ".list02", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
             start: "top 60%", // 애니메이션 시작시점
             end: "100px bottom", // 애니메이션 종료시점
             scrub: 3,
@@ -50,7 +54,7 @@ $(document).ready(function () {
     });
     gsap.from(".sub_work_sec .img03", {
         scrollTrigger: {
-            trigger: ".tit03", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            trigger: ".sub_third", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
             start: "top 60%", // 애니메이션 시작시점
             end: "100px bottom", // 애니메이션 종료시점
             scrub: 3,
@@ -91,10 +95,10 @@ $(document).ready(function () {
             return time;
     }
     window.onload = function () {
-        /*refresh top*/
+        /*refresh top
         setTimeout(function () {
             scrollTo(0, 0);
-        }, 100)
+        }, 100)*/
         setClock();
         setInterval(setClock, 1000);//1초마다 setClock 함수 실행
     }
@@ -133,7 +137,7 @@ $(document).ready(function () {
 
     TweenMax.to(".intro_group", 2.2, {
         delay: 3,
-        top: "-100%",
+        top: "-120%",
         ease: Expo.easeInOut
     });
 });

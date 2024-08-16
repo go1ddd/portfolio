@@ -268,6 +268,7 @@ header .clock:hover {
     .Menu-list {
         gap: 5vw;
     }
+
 }
 
 /*cursor start*/
@@ -289,7 +290,7 @@ header .clock:hover {
 /*footer start*/
 footer {
     position: relative;
-    padding: 10.416vw 0 0 10.15625vw;
+    padding: 10.416vw 10.15625vw;
     width: 100vw;
 }
 
@@ -427,7 +428,7 @@ address {
     display: flex;
     gap: 2.8645vw;
     margin-top: 2.604vw;
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .address_wrap {
@@ -438,7 +439,6 @@ address {
 
 .address_wrap h4 {
     color: #717171;
-    font-size: 2.083vw;
     font-weight: var(--weight-b);
 }
 
@@ -522,14 +522,76 @@ address {
 }
 
 .footer_shape01 {
-    top: 20%;
+    top: 210px;
     left: 0;
     max-width: 210px;
 }
 
-
 .footer_shape02 {
-    bottom: -40%;
+    bottom: -150px;
     right: 0;
     max-width: 345px;
+}
+
+/* footer responsive start*/
+@media (max-width:2000px) {
+    .footer_shape {
+        display: none;
+    }
+}
+
+@media (max-width:1100px) {
+    .footer_head_scroller {
+        height: 9.5vh;
+    }
+
+    .footer_head_scroller .scroller_item {
+        height: 9.5vh;
+    }
+
+    .footer_head {
+        font-size: 8vw;
+    }
+
+    address {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:768px) {
+    address {
+        font-size: 30px;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:600px) {
+    .footer_head_scroller {
+        height: 6vh;
+    }
+
+    .footer_head_scroller .scroller_item {
+        height: 6vh;
+    }
+
+    address {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .footer_head_scroller {
+        height: 4.1vh;
+    }
+
+    .footer_head_scroller .scroller_item {
+        height: 4.1vh;
+    }
+
+    .footer_head {
+        font-size: 10vw;
+    }
+
 }
