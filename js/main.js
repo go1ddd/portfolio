@@ -95,10 +95,10 @@ $(document).ready(function () {
             return time;
     }
     window.onload = function () {
-        /*refresh top
+        /*refresh top*/
         setTimeout(function () {
             scrollTo(0, 0);
-        }, 100)*/
+        }, 100)
         setClock();
         setInterval(setClock, 1000);//1초마다 setClock 함수 실행
     }

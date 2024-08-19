@@ -78,7 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://poliigon.com/cdn-cgi/image/height=280,q=75,f=auto/https://cdn.poliigon.com/categories/textures/metal-metal.jpg);
+    background-image: url(../img/metal.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
