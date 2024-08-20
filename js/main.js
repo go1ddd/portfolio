@@ -5,10 +5,10 @@ setTimeout(function () {
 
 
 $(document).ready(function () {
-    /*resize refresh
+    /*resize refresh*/
     window.onresize = function () {
         document.location.reload();
-    };*/
+    };
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
