@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<style>
+    img {
+        vertical-align: bottom;
+    }
+
+    .list_icon1.active img:first-child {
+        display: none;
+    }
+
+    .list_icon1 img:last-child {
+        display: none
+    }
+
+    .list_icon1.active img:last-child {
+        display: block;
+    }
+
+    .list_icon2.active img:first-child {
+        display: none;
+    }
+
+    .list_icon2 img:last-child {
+        display: none
+    }
+
+    .list_icon2.active img:last-child {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="list_icon1">
+            <img src="img/2.left/page_btn/list.png" alt="">
+            <img src="img/2.left/page_btn/list_checked.png" alt="">
+        </div>
+        <div class="list_icon2">
+            <img class="" src="img/2.left/page_btn/block.png" alt="">
+            <img class="" src="img/2.left/page_btn/block_checked.png" alt="">
+        </div>
+
+
+    </div>
+
+    <script>
+        $('.list_icon1').click(function () {
+            $(this).addClass('active')
+            $('.list_icon2').removeClass('active');
+        })
+        $('.list_icon2').click(function () {
+            $(this).addClass('active')
+            $('.list_icon1').removeClass('active');
+        })
+    </script>
+</body>
+
+</html>

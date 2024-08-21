@@ -1,0 +1,883 @@
+/* root */
+:root {
+    /* font-size */
+    --size-xsm: 1.4rem;
+    --size-sm: 1.6rem;
+    --size-middle: 2.0rem;
+    --size-large: 2.6rem;
+    --size-big: 3.2rem;
+    --size-xbig: 5.2rem;
+    --size-2xbig: 12rem;
+    --size-3xbig: 15rem;
+    --size-4xbig: 20rem;
+    /* color */
+    --color-black: #3f454d;
+    --color-white: #ffffff;
+
+    /* weight */
+    --weight-l: 300;
+    --weight-r: 500;
+    --weight-b: 700;
+    --weight-bk: 900;
+}
+
+/*visual_start*/
+.visual {
+    color: #fff;
+    padding: 0;
+}
+
+.visual video {
+    display: block;
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
+    object-fit: cover;
+}
+
+.img_m {
+    display: none;
+}
+
+.visual img {
+    width: 100vw;
+}
+
+.visual .img_m {
+    position: relative;
+}
+
+.visual .img_m .txt_box {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    font-optical-sizing: auto;
+    font-weight: var(--weight-r);
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+/*men_start*/
+.sec {
+    width: 100vw;
+    margin-top: 7.8%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+/* 남자섹션 반응형시 좌우여백 조절, gsap 반응형 방법 찾기*/
+.sec img {
+    width: 100%;
+}
+
+.sec>a {
+    position: relative;
+}
+
+.sec .txt_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 50px;
+    font-weight: var(--weight-bk);
+    font-size: var(--size-4xbig);
+    color: #fff;
+    line-height: 180px;
+    white-space: nowrap;
+    /*반응형시 line-height 조정으로 크기 조절*/
+}
+
+.sec .txt_btn_hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sec .txt_btn_hamburger span {
+    width: 110px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.sec a img {
+    filter: grayscale(1.0);
+    transition: 1s;
+}
+
+.sec a:hover img {
+    filter: grayscale(0);
+}
+
+/*season_start*/
+.season_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.season_sec .txt_box h3 {
+    font-family: 'Druk Wide Trial', sans-serif;
+    font-weight: var(--weight-b);
+    font-size: var(--size-big);
+    margin-right: 15px;
+
+}
+
+.season_sec .txt_box p {
+    margin-top: 40px;
+    font-weight: var(--weight-r);
+    font-size: var(--size-large);
+}
+
+.season_sec .thumbnail {
+    position: relative;
+}
+
+.season_sec .thumbnail:hover::after {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 4%;
+    content: "Show more";
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-weight: var(--weight-b);
+    font-size: var(--size-big);
+}
+
+/*kids_start*/
+
+.kids_sec {
+    position: relative;
+}
+
+.kids_sec a {
+    display: flex;
+    gap: 50px;
+    position: static;
+}
+
+.kids_sec video {
+    display: block;
+    width: calc(100vw - (100vw - 100%));
+    min-height: 750px;
+    object-fit: cover;
+}
+
+/*shoes_start*/
+.shoes-bags_sec {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.shoes-bags_sec .imgs_bags ul {
+    display: flex;
+}
+
+.shoes-bags_sec .txt_btn {
+    top: 10.5%;
+    transform: translate(-50%);
+    font-size: var(--size-3xbig);
+    line-height: 130px;
+}
+
+.shoes-bags_sec .txt_box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: var(--weight-b);
+    font-size: var(--size-xbig);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shoes-bags_sec a:hover .txt_box {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*bags_start*/
+.shoes-bags_sec .imgs_shoes ul {
+    display: flex;
+}
+
+/*home_start*/
+.home_sec .txt_btn {
+    font-size: var(--size-2xbig);
+    line-height: 105px;
+    letter-spacing: 20px;
+}
+
+
+.home_sec ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.home_sec ul li {
+    display: flex;
+    gap: 40px;
+}
+
+
+/*highlight_start*/
+.highlight_sec .tit_box {
+    text-align: center;
+    font-family: 'Druk Wide Trial', sans-serif;
+    font-weight: var(--weight-bk);
+    font-size: var(--size-2xbig);
+}
+
+.highlight_sec .txt_box p {
+    line-height: 30px;
+}
+
+.highlight_sec>a {
+    margin-top: 40px;
+}
+
+.highlight_sec .txt_box {
+    text-align: center;
+    font-family: 'Druk Wide Trial', sans-serif;
+    font-weight: var(--weight-bk);
+    font-size: var(--size-big);
+    margin-top: 50px;
+}
+
+.highlight_sec .txt_box h3 {
+    border-bottom: 5px solid black;
+    margin-bottom: 20px;
+}
+
+.highlight_sec .txt_box h3:hover {
+    color: #A51329;
+    border-bottom: 5px solid #A51329;
+}
+
+
+.highlight_sec .txt_box p {
+    font-weight: var(--weight-l);
+    font-size: var(--size-middle);
+    margin-bottom: 10px;
+}
+
+/* runway_start*/
+.runway_sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 130px
+}
+
+.runway_sec>.runway_swiper {
+    flex: 2.6;
+}
+
+.runway_sec>.tit_box {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Druk Wide Trial', sans-serif;
+    font-weight: var(--weight-bk);
+    font-size: 52px;
+    text-align: center;
+}
+
+
+.runway_swiper_nav {
+    position: relative;
+    top: 40px;
+    width: 100%;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 50% !important;
+    left: 28% !important;
+    transform: translate(50%, 50%);
+    gap: 20px;
+}
+
+.runway_swiper_nav .swiper-button-next::after,
+.runway_swiper_nav .swiper-button-prev::after {
+    color: #000;
+    font-size: 40px;
+    font-weight: var(--weight-l);
+    top: 10%;
+    display: none;
+}
+
+.runway_swiper_nav .swiper-button-next {
+    background-image: url("../imgs/11.runway/arrow3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.runway_swiper_nav .swiper-button-prev {
+    background-image: url("../imgs/11.runway/arrow4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.runway_swiper_nav .swiper-pagination {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transform: translateY(10px);
+}
+
+.runway_swiper_nav .swiper-pagination-bullet {
+    background-color: #000;
+    margin: 0 !important;
+}
+
+
+/* service_start*/
+.service_sec {
+    font-weight: var(--weight-b);
+    font-size: 52px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service_sec .txt_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    transition: 0.5s;
+    font-weight: var(--weight-bk);
+}
+
+.service_sec .txt_box h5 {
+    font-weight: var(--weight-b);
+    font-size: var(--size-big);
+}
+
+.service_sec .txt_box p {
+    font-weight: var(--weight-r);
+    font-size: var(--size-middle);
+}
+
+.service_sec>.imgs ul li {
+    position: relative;
+}
+
+.service_sec>.imgs ul li .txt_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    color: #fff;
+    background-color: #000000;
+}
+
+.service_sec>.imgs ul li:hover .txt_box {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.service_sec .imgs {
+    margin-top: 60px;
+}
+
+.service_sec .imgs ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.service_sec .imgs ul a img {
+    filter: grayscale(0);
+}
+
+/*responsive_start*/
+@media (max-width: 1700px) {
+    .home_sec .txt_btn {
+        font-size: 10rem;
+        line-height: 8rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .home_sec .txt_btn {
+        font-size: 8rem;
+        line-height: 6rem;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 26% !important;
+    }
+}
+
+
+@media (max-width: 1400px) {
+
+
+    :root {
+        --size-4xbig: 150px;
+    }
+
+    .sec .txt_btn {
+        line-height: 130px;
+        gap: 40px;
+    }
+
+    .kids_sec a {
+        gap: 40px;
+    }
+
+    :root {
+        --size-big: 26px;
+        --size-large: 20px
+    }
+
+    .shoes-bags_sec a .txt_btn {
+        font-size: 100PX;
+        line-height: 80px;
+    }
+
+    .home_sec .txt_btn {
+        font-size: 6rem;
+        line-height: 4rem;
+    }
+
+    .home_sec .txt_btn .txt_btn_hamburger span {
+        height: 5px;
+        width: 80px;
+    }
+
+
+}
+
+@media (max-width: 1240px) {
+    .shoes-bags_sec .txt_box {
+        display: block
+    }
+
+    .highlight_sec .tit_box {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --size-xbig: 30px;
+        --size-big: 20px;
+        --size-large: 18px;
+    }
+
+    .runway_sec .runway_swiper_nav .swiper-button-next::after,
+    .runway_sec .runway_swiper_nav .swiper-button-prev::after {
+        font-size: 30px;
+    }
+
+    .sec a img {
+        filter: grayscale(0);
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .shoes-bags_sec a .txt_btn {
+        line-height: 50px;
+        font-size: 60PX;
+        gap: 10px;
+    }
+
+    .shoes-bags_sec .txt_btn_hamburger span {
+        width: 60px;
+        height: 5px;
+    }
+
+    .home_sec .txt_btn {
+        letter-spacing: normal;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .home_sec .txt_btn .txt_btn_hamburger span {
+        height: 5px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sec .txt_btn {
+        line-height: 100px;
+    }
+
+    :root {
+        --size-4xbig: 120px;
+    }
+
+    .home_sec .txt_btn {
+        letter-spacing: normal;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .home_sec .txt_btn .txt_btn_hamburger span {
+        height: 5px;
+        width: 80px;
+    }
+
+    .highlight_sec .tit_box {
+        font-size: 8rem;
+    }
+
+    .runway_sec {
+        gap: 60px;
+    }
+
+    .service_sec .txt_box p {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .sec {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .sec .txt_btn {
+        gap: 5px;
+    }
+
+    .kids_sec a {
+        gap: 5px;
+    }
+
+    .visual {
+        padding-top: 60px;
+    }
+
+    .video_p,
+    .img_p {
+        display: none;
+    }
+
+    .img_m {
+        display: block;
+    }
+
+    .visual img {
+        width: 100vw;
+    }
+
+    .sec .txt_btn {
+        line-height: 100px;
+    }
+
+    .season_sec {
+        position: relative;
+    }
+
+    .season_sec .txt_box {
+        position: absolute;
+        top: 5%;
+        left: 7%;
+        z-index: 2;
+        color: #fff;
+    }
+
+    .season_sec .thumbnail:hover::after {
+        content: "";
+    }
+
+    .shoes-bags_sec .imgs_bags,
+    .shoes-bags_sec .imgs_shoes {
+        display: none;
+    }
+
+    .shoes-bags_sec a .txt_btn {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        line-height: 90px;
+    }
+
+    .shoes-bags_sec .txt_btn_hamburger span {
+        width: 110px;
+        height: 10px;
+    }
+
+    .shoes-bags_sec .txt_box {
+        top: 35%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    :root {
+        --size-big: 32px;
+        --size-large: 26px;
+        --size-middle: 1.6rem;
+    }
+
+    .home_sec .txt_btn {
+        line-height: 3rem;
+    }
+
+    .home_sec .txt_btn .txt_btn_hamburger span {
+        width: 60px;
+    }
+
+    .home_sec ul {
+        gap: 20px;
+    }
+
+    .home_sec ul li {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .highlight_sec .tit_box {
+        font-size: 6rem;
+    }
+
+    .highlight_sec>a {
+        margin-top: 20px;
+    }
+
+    .highlight_sec .txt_box {
+        margin-top: 20px;
+    }
+
+    .runway_sec {
+        position: relative;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 100px;
+    }
+
+    .runway_sec .tit_box {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+    }
+
+    .runway_sec .tit_box h3 {
+        position: relative;
+        top: -450px;
+        font-size: 60px;
+    }
+
+    .runway_sec .runway_swiper_nav {
+        position: relative;
+        top: 80px;
+    }
+
+    .runway_swiper_nav .swiper-pagination {
+        gap: 10px;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 33% !important;
+
+    }
+
+    .service_sec {
+        margin-top: 110px;
+        font-size: 32px;
+    }
+
+    .service_sec .imgs ul {
+        flex-direction: column;
+    }
+
+    .service_sec .imgs {
+        margin-top: 40px;
+    }
+
+
+    .service_sec>.imgs ul li .txt_box {
+        position: relative;
+        justify-content: start;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        color: black;
+        transform: none;
+        top: 0;
+        left: 0;
+        margin: 40px 0;
+
+    }
+
+    .service_sec>.imgs ul li:hover .txt_box {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .service_sec>.imgs ul li .txt_box h5 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .service_sec .txt_box p {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+    :root {
+        --size-4xbig: 100px;
+    }
+
+    .sec .txt_btn {
+        line-height: 80px;
+    }
+
+    .sec .txt_btn_hamburger span {
+        width: 80px;
+    }
+
+    :root {
+        --size-big: 26px;
+        --size-large: 24px;
+    }
+
+    .home_sec .txt_btn {
+        line-height: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --size-big: 20px;
+        --size-xbig: 25px;
+        --size-large: 18px;
+        --size-4xbig: 60px;
+    }
+
+    .sec .txt_btn {
+        line-height: 50px;
+    }
+
+    .sec .txt_btn_hamburger span {
+        width: 60px;
+        height: 5px;
+    }
+
+    .shoes-bags_sec a .txt_btn {
+        font-size: var(--size-4xbig);
+        line-height: 50px;
+    }
+
+    .home_sec .txt_btn {
+        line-height: 3rem;
+    }
+
+    .highlight_sec .tit_box {
+        font-size: 4rem;
+    }
+
+    .runway_sec .tit_box h3 {
+        font-size: 4rem;
+    }
+
+    .runway_sec .tit_box .runway_swiper_nav {
+        font-size: 50px;
+    }
+
+    .service_sec {
+        font-size: 32px;
+    }
+
+    .visual .img_m .txt_box {
+        font-size: 23px;
+    }
+
+    .runway_sec {
+        position: relative;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 80px;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 27% !important;
+    }
+
+}
+
+
+
+@media (max-width: 500px) {
+    :root {
+        --size-big: 16px;
+        --size-large: 16px;
+    }
+
+    .home_sec .txt_btn {
+        font-size: 2rem;
+        line-height: 1.8rem;
+    }
+
+    .home_sec .txt_btn .txt_btn_hamburger span {
+        height: 3px;
+        width: 30px;
+    }
+
+    .highlight_sec .txt_box p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --size-xbig: 20px;
+
+    }
+
+    .highlight_sec .tit_box {
+        font-size: 3rem;
+    }
+
+    .service_sec {
+        font-size: 30px;
+    }
+
+    .visual .img_m .txt_box {
+        font-size: 20px;
+    }
+}
