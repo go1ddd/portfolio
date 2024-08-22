@@ -5,10 +5,7 @@ setTimeout(function () {
 
 
 $(document).ready(function () {
-    /*resize refresh*/
-    window.onresize = function () {
-        document.location.reload();
-    };
+
     /*cursor start*/
     document.addEventListener('mousemove', (e) => {
         let mouseX = e.pageX + 10; // document의 x좌표값
@@ -95,10 +92,6 @@ $(document).ready(function () {
             return time;
     }
     window.onload = function () {
-        /*refresh top*/
-        setTimeout(function () {
-            scrollTo(0, 0);
-        }, 100)
         setClock();
         setInterval(setClock, 1000);//1초마다 setClock 함수 실행
     }

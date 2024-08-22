@@ -158,11 +158,11 @@ header {
 }
 
 .swiper-button-prev {
-  background-image: url("imgs/prev.png");
+  background-image: url("../imgs/prev.png");
 }
 
 .swiper-button-next {
-  background-image: url("imgs/next.png");
+  background-image: url("../imgs/next.png");
 }
 
 .swiper-button-prev,
