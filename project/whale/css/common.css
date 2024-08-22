@@ -1,0 +1,46 @@
+/*! header start*/
+header{ margin: 0 auto; padding: 15px 70px; box-sizing: border-box; position: fixed;top: 0;left: 0;width: 100%;background-color: #fff;z-index: 20;}
+header nav{max-width: 1340px;}
+header nav .menus, header .menus .download, header > nav ,header > nav .nav_list > ul,header > header .menus {display: flex; align-items: center;}
+header > nav{justify-content: space-between;}
+header > nav .nav_list ul{}
+header > nav .nav_list ul li{position: relative; }
+header > nav > .nav_list > ul > li > a{padding: 20px;}
+header > nav .nav_list ul li a + ul{position: absolute; top: 100%; left: 0;  opacity: 0; visibility: hidden;   transition: 0.3s;}
+header > nav .nav_list ul li:hover a + ul{opacity: 1; visibility: visible; border: 1px solid lightgray;  width: 100%; min-width:150px; border-radius: 7px; padding: 10px 0;}
+header > nav .nav_list ul li:hover a + ul li a{padding:10px 20px; font-size: 14px;}
+header > nav .nav_list ul li a + ul li a:hover{background-color: lightgray;width: 100%; box-sizing: border-box;}
+header .menus{gap: 20px;}
+header .menus .download{border: 1px solid lightgray; padding: 10px; font-size: 12px; border-radius: 5px; gap: 5px;}
+header .menus .download:hover{background-color: #efefef;}
+header .logo img{max-width: 150px;}
+.wrap{padding-top:106px ;}
+.m_menu{display: none;}
+@media(max-width:1240px){
+    .nav_list{display: none;}
+    .m_menu{display: block;}
+}
+
+@media(max-width:768px){
+    header{padding: 20px;}
+    .wrap .browser{flex-direction: column;}
+    
+}
+
+/*! header end*/
+
+footer{display: none;}
+.wrap img{width: 100%;}
+
+/*! common start*/
+section .sec_tit {text-align: center; margin: 40px 0;}
+section .sec_tit h5{color: #2288EC; font-weight: bold; font-size: 28px;}
+section .sec_tit h2{font-weight: bold;font-size: 50px; margin: 25px 0;}
+section .sec_tit p{color: #777; font-size: 20px;}
+/*! common end*/
+@media(max-width:768px){
+    section .sec_tit h5{color: #2288EC; font-weight: bold; font-size: 22px;}
+section .sec_tit h2{font-weight: bold;font-size: 30px; margin: 25px 0;}
+section .sec_tit p{color: #777; font-size: 16px;}
+    
+}

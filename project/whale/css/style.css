@@ -1,0 +1,79 @@
+/*! browser start*/
+
+.wrap .browser{display: flex; align-items: center; padding: 0 40px;}
+.wrap .browser:nth-child(even){flex-direction: row-reverse;}
+.wrap .browser:nth-child(even) .txt{margin-right: 0; margin-left: 50px;}
+.wrap .browser > div{flex: 1;}
+.wrap .browser > .txt{margin-right: 50px;}
+.wrap .browser .txt > h5{color: #2187EC; font-size: 28px;font-weight: bold;}
+.wrap .browser .txt > h2{font-size: 60px; font-weight: bold; line-height: 1.3; margin: 25px 0;}
+.wrap .browser .txt > p{font-size: 20px; color: #777; line-height: 1.3;}
+.wrap .browser .download {background-color: #05C3A7; display: inline-block; margin-top: 30px; padding: 15px; border-radius: 5px; display: inline-flex ; align-items: center; gap: 5px;}
+.wrap .browser .download > a{color: #fff;  font-weight: bold;}
+.wrap .browser .download img {max-width: 22px;}
+
+@media(max-width:768px){
+    .wrap .browser:nth-child(even) {
+        flex-direction: column;
+        
+    }
+    .wrap .browser:nth-child(even) .txt{
+        margin-left:0 ;
+    }
+    .wrap .browser{padding: 100px 20px; }
+    .wrap .browser .txt > h2{font-size: 32px;}
+    .wrap .browser .txt > h5{font-size: 20px;}
+    .wrap .browser .txt > p{font-size: 16px;}
+}
+/*! browser end*/
+
+
+/*! security start*/
+.wrap .security {background-color:#F1EFFC;  padding:   100px ;}
+.wrap .security .box{display: flex; padding: 40px;gap: 50px;}
+.wrap .security .box .security_list{width: 35%;}
+.wrap .security .box .security_list li{padding:  40px; position: relative;}
+.wrap .security .box .security_list li:first-child{background-color: #7352EC; border-radius: 15px;}
+.wrap .security .box .security_list li:first-child h3{color: #fff;}
+.wrap .security .box .security_list li:first-child p{color: lightgray; line-height: 1.3; margin-top: 20px;}
+.wrap .security .box .security_list li:nth-child(3),.wrap .security .box .security_list li:nth-child(2){border-bottom: 1px solid #dfdfdf;}
+.wrap .security .box .security_list h3{font-size: 30px; font-weight: bold;}
+.wrap .security .box .security_list p{font-size: 20px;}
+.wrap .security .box .thumbnaul{width: 65%;}
+
+.wrap .security .setting{position: absolute; top:50px;right:30px; display: flex; flex-direction: column; gap: 5px;}
+.wrap .security .setting span{ width: 5px; height: 5px; background-color: #fff;  border-radius: 5px;}
+.wrap .security .setting span:not(:first-child){opacity: 0.5;}
+@media(max-width:768px){
+    .wrap .security{padding: 60px 20px;}
+    .wrap .security .box{padding: 0;}
+    .wrap .security .box .security_list{width: 100%;}
+    .wrap .security .box{flex-direction: column;}
+    .wrap .security .box .thumbnaul{width: 100%;}
+}
+/*! security end*/
+
+/*! widget start*/
+.wrap .widget{height: 400vh; padding: 100px 0;}
+.wrap .widget .box{position: sticky; top: 25%;}
+.wrap .widget .sec_tit{margin-bottom: 100px;}
+.wrap .widget .widget_img{text-align: center;}
+.wrap .widget .widget_img img{max-width: 750px ;}
+/*! widget end*/
+
+
+
+
+/*! expansion start*/
+.wrap .expansion .app_list ul{display: flex; justify-content: center; gap: 40px;}
+.wrap .expansion .app_list ul li:nth-child(even){margin-top: 30px;}
+.wrap .expansion  .best_app{max-width: 1240px; margin:0 auto}
+
+.wrap .expansion  .best_app ul li{ background-color: #fff;  margin: 20px;  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25); padding: 35px; border-radius: 5px; box-sizing: border-box; display: flex; align-items: center; gap: 20px; border-radius: 10px;}
+.wrap .expansion  .best_app ul li img{max-width: 80px;}
+.wrap .expansion  .best_app ul li h3{font-size: 24px; font-weight: bold; margin-bottom: 15px;}
+.wrap .expansion  .best_app ul li p{font-size: 18px; color: #777; line-height: 1.3;}
+
+
+
+/*! expansion end*/

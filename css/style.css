@@ -684,9 +684,6 @@
 }
 
 
-.sub_third .sub_work_tit {
-    font-size: 10.625vw;
-}
 
 /* sub_work start responsive start*/
 
@@ -713,9 +710,6 @@
         font-size: 22vw;
     }
 
-    .sub_third .sub_work_tit {
-        font-size: 14vw;
-    }
 }
 
 @media (max-width: 600px) {

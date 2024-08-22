@@ -54,7 +54,7 @@ $(document).ready(function () {
     });
     gsap.from(".sub_work_sec .img03", {
         scrollTrigger: {
-            trigger: ".sub_third", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+            trigger: ".list03", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
             start: "top 60%", // 애니메이션 시작시점
             end: "100px bottom", // 애니메이션 종료시점
             scrub: 3,
