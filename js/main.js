@@ -1,7 +1,50 @@
 /*body scroll on*/
+/*intro start*/
+var textWrapper = document.querySelector(".intro_title");
+
+textWrapper.innerHTML = textWrapper.textContent.replace(
+    /([^\x00-\x10]|\w)/g,
+    "<span class='letter'>$&</span>"
+);
+
+anime
+    .timeline({ loop: false })
+    .add({
+        targets: ".intro_title .letter",
+        translateX: [140, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: function (el, i) {
+            return 50 * i;
+
+        }
+    })
+    .add({
+        targets: ".intro_title .letter",
+        translateX: [0, -140],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1000,
+        delay: function (el, i) {
+            return 2000 + 50 * i;
+        }
+    });
+
+TweenMax.to(".intro_group", 2.2, {
+    delay: 3,
+    top: "-120%",
+    ease: Expo.easeInOut
+});
+
+
+
 setTimeout(function () {
     $("body").removeClass('fixed');
 }, 5000);
+
+
 
 
 $(document).ready(function () {
@@ -95,43 +138,6 @@ $(document).ready(function () {
         setClock();
         setInterval(setClock, 1000);//1초마다 setClock 함수 실행
     }
-    /*intro start*/
-    var textWrapper = document.querySelector(".intro_title");
 
-    textWrapper.innerHTML = textWrapper.textContent.replace(
-        /([^\x00-\x10]|\w)/g,
-        "<span class='letter'>$&</span>"
-    );
-
-    anime
-        .timeline({ loop: false })
-        .add({
-            targets: ".intro_title .letter",
-            translateX: [140, 0],
-            translateZ: 0,
-            opacity: [0, 1],
-            easing: "easeOutExpo",
-            duration: 1000,
-            delay: function (el, i) {
-                return 50 * i;
-
-            }
-        })
-        .add({
-            targets: ".intro_title .letter",
-            translateX: [0, -140],
-            opacity: [1, 0],
-            easing: "easeInExpo",
-            duration: 1000,
-            delay: function (el, i) {
-                return 2000 + 50 * i;
-            }
-        });
-
-    TweenMax.to(".intro_group", 2.2, {
-        delay: 3,
-        top: "-120%",
-        ease: Expo.easeInOut
-    });
 });
 
